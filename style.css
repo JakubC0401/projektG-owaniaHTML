@@ -1,12 +1,30 @@
-body
+html, body
 {
+    width:100%;
+    height:100%;
+    margin:0 !important;
+    padding:0; 
     font-family: 'Open Sans', sans-serif;
 }
+.wrapper
+{
+    width: 100%;
+}
+
+.test
+{
+    width:100%;
+}
+
 .siteLogo
 {
     text-align: left;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0;
+    margin-right: 0;
+    background:rgba(78, 78, 78, 0.1);
+    padding: 15px;
+    width:100%;
+    
 }
 .siteLogo > img 
 {
@@ -26,14 +44,8 @@ body
     background-image: url("background.png");
     background-size : cover;
 }
-.container
-{
-    margin-top:auto;
-    margin-bottom:auto;
-    margin-left:auto;
-    margin-right:auto;
-    
-}
+
+
 h1
 {
     font-family: 'Oswald', sans-serif;
@@ -62,7 +74,6 @@ h1
 }
 .form-control
 {
-  
   margin-left: auto;
   margin-right: auto;
 }
