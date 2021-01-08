@@ -1,39 +1,31 @@
-<?php
-    
-    $conn = mysqli_connect("localhost", "root", "", 'user');
+<?php        
+    $conn = mysqli_connect("userdb1", "1202557_i5E183", "zG1MPHPlyigmJ8", '1202557_i5E183');
     if (!$conn) {
       die("Connection failed: " . mysqli_connect_error());
     }
 
-    require_once "register.html";
-    //mysql_connect('localhost','root','');
-   //mysql_select_db("user");
-    
    $login = $_POST['login'];
-   $haslo1 = $_POST['pw1'];
-   $haslo2 = $_POST['pw2'];
-   $email = $_POST['email'];
+   $haslo1 = $_POST['password'];
+   $haslo2 = $_POST['repeatPassword'];
     
-    if (isset($_POST['za']))
+    if (isset($_POST['sumbit']))
     {    
         $sql = "SELECT login FROM user WHERE login = '" .$login. "';";
         $x = mysqli_num_rows(mysqli_query($conn, $sql));
-        // sprawdzamy czy login nie jest już w bazie
         if ( $x == 0)
         {
-            if ($haslo1 == $haslo2) // sprawdzamy czy hasła takie same
+            if ($haslo1 == $haslo2)
             {
                 mysqli_query($conn,"INSERT INTO `user` (`login`, `password`)
-                    VALUES ('".$login."', '".md5($haslo1)."');");
-                
-                echo "Konto zostało utworzone!";
+                    VALUES ('".$login."', '".md5($haslo1)."');");                
+                echo "<h2>Konto zostało stworzone!</h2>"
             }
-            else echo "Hasła nie są takie same";
+            else echo "<h2>Hasła nie są takie same!</h2>";
         }
-        else echo "Podany login jest już zajęty.";
+        else echo "</h2>Podany login jest już zajęty.</h2>";
     }
     else
     {
-        echo "xD";
+        echo "<h2>Uzupełnij wymagane dane!</h2>";
     }
 ?>
