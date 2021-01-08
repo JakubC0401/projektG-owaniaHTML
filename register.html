@@ -38,23 +38,45 @@
           <input style="width: 50%;"  class="form-control" placeholder="login">
           <br>
          
-          <input style="width: 50%;"  class="form-control" placeholder="email">
+          <input style="width: 50%;"  class="form-control" placeholder="email" type="email">
           <br>
-          <input style="width: 50%;" type="password" class="form-control"  name="" id="" placeholder="hasło">
+          <input style="width: 50%;" type="password" class="form-control" id="password" placeholder="hasło">
           <br>
-          <input style="width: 50%;" type="password" class="form-control"  name="" id="" placeholder="powtórz hasło">
+          <input style="width: 50%;" type="password" class="form-control" id="repeatPassword" placeholder="powtórz hasło">
           <br>
           <button type="submit" class="btn btn-primary">Zarejestruj się</button>
           <br>
-          <br>
-          
+          <br>          
         </form>
+        <input type="checkbox" id="regulamin"/>
+        <label for="regulamin">Akceptuję </label>
+        <label id="regTxt">regulamin</label>
+        
       </div>
-      
 
-
-
-
+      <!-- Regulamin jakis -->
+      <div class="modal" id="popUp">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Regulamin 1.</p>
+        </div>
+      </div>
+      <script>        
+        var modal = document.getElementById("popUp"); 
+        var btn = document.getElementById("regTxt");
+        var span = document.getElementsByClassName("close")[0];
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+        </script>
     </div>
     
     
