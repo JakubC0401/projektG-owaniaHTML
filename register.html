@@ -36,7 +36,7 @@
           <br>          
           <input style="width: 50%;" class="form-control" placeholder="Nazwisko">
           <br>         
-          <input style="width: 50%;" class="form-control" name="login" placeholder="Login" required>
+          <input style="width: 50%;" class="form-control" name="login" placeholder="Login" required minlength="4">
           <br>         
           <input style="width: 50%;" class="form-control" type="email" name="email" placeholder="Email" required>
           <br>
@@ -44,9 +44,10 @@
           <br>
           <input style="width: 50%;" type="password" class="form-control" name="repeatPassword" placeholder="Powtórz hasło" required minlength="6">
           <br>          
-          <input type="checkbox" id="regulamin"/>
+          <input type="checkbox" id="regulamin" required/>
           <label for="regulamin">Akceptuję </label>
           <label id="regulaminTxt" class="onText"><u>regulamin</u></label>
+          <br>
           <br>
           <button type="submit" class="btn btn-primary" name="sumbit">Zarejestruj się</button>
           <br>          
