@@ -68,7 +68,7 @@
           <div class="input-group" class="form-control" style="width: 50%;">
             <input type="password" class="form-control" id="password_hidden" name="password" placeholder="Hasło">
             <span class="input-group-btn">
-              <button class="btn btn-default reveal" type="button"><img src="eye_hidden.png" width="30"></button>
+              <button class="btn btn-default reveal" style="background-color:white; margin-top:2px; height:35px;"  type="button"><img src="eye_hidden.png" style="margin-top:-6px;" width="25"></button>
             </span>          
           </div>
           </br>
