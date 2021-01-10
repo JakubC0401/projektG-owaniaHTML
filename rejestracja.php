@@ -26,7 +26,10 @@
             }
             else echo "<h2>Hasła nie są takie same!</h2>";
         }
-        else echo "</h2>Podany login jest już zajęty.</h2>";
+        else{ 
+            header("Location: register.html");
+            echo "</h2>Podany login jest już zajęty.</h2>";
+        }
     }
     else
     {
