@@ -1,3 +1,40 @@
+
+<?php        
+  //$conn = mysqli_connect("userdb1", "1202557_i5E183", "zG1MPHPlyigmJ8", '1202557_i5E183');
+  $conn = mysqli_connect("localhost", "root", "", 'user');
+  if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+  }
+
+
+
+  if (isset($_POST['sumbit']))
+  {    
+      $login = $_POST['login'];
+      $haslo1 = $_POST['password'];
+      $haslo2 = $_POST['repeatPassword'];
+
+      $sql = "SELECT login FROM user WHERE login = '" .$login. "';";
+      $x = mysqli_num_rows(mysqli_query($conn, $sql));
+      if ( $x == 0)
+      {
+          if ($haslo1 == $haslo2)
+          {
+              mysqli_query($conn,"INSERT INTO `user` (`login`, `password`)
+                  VALUES ('".$login."', '".md5($haslo1)."');");                
+              echo "<h2>Konto zostało stworzone!</h2>";
+              header("Location: index.html");
+          }
+          else echo "<h2>Hasła nie są takie same!</h2>";
+      }
+      else
+      { 
+          $_SESSION['e_login']="Istnieje już konto przypisane do tego loginu!";
+      }
+  }
+  
+
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -29,7 +66,7 @@
       <!--endheader-->
      
       <div class="logBox">
-        <form method="post" action="rejestracja.php">
+        <form method="post">
           <h1  class="font-weight-normal text-primary">REJESTRACJA</h1>
           <br>
           <input style="width: 50%;" class="form-control" placeholder="Imię">
@@ -37,6 +74,12 @@
           <input style="width: 50%;" class="form-control" placeholder="Nazwisko">
           <br>         
           <input style="width: 50%;" class="form-control" name="login" placeholder="Login" required>
+          <?php
+                if(isset($_SESSION['e_login'])){
+                    echo '<div class="error">'.$_SESSION['e_login'].'</div>';
+                    unset($_SESSION['e_login']);
+                }
+            ?>
           <br>         
           <input style="width: 50%;" class="form-control" type="email" name="email" placeholder="Email" required>
           <br>

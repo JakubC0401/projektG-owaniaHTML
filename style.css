@@ -5,10 +5,15 @@ html, body{
     padding:0; 
     font-family: 'Open Sans', sans-serif;
 }
-.wrapper{
+.wrapper
+{
     width: 100%;
 }
-
+.error
+{
+  color:rgb(194, 0, 0);
+  font-size: 12px;
+}
 .siteLogo{
     text-align: left;
     margin-left: 0;
