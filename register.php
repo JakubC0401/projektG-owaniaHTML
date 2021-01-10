@@ -83,9 +83,19 @@
                      <br>         
           <input style="width: 50%;" class="form-control" type="email" name="email" placeholder="Email" required>
           <br>
-          <input style="width: 50%;" type="password" class="form-control" name="password" placeholder="Hasło" required minlength="6">
+          <div class="input-group" class="form-control" style="width: 50%;">
+            <input type="password" class="form-control" id="password_hidden" name="password" placeholder="Hasło" required minlength="6">
+            <span class="input-group-btn">
+              <button class="btn btn-default reveal" style="background-color:white; margin-top:2px; height:35px;"  type="button"><img src="eye_hidden.png" style="margin-top:-6px;" width="25"></button>
+            </span>          
+          </div>
           <br>
-          <input style="width: 50%;" type="password" class="form-control" name="repeatPassword" placeholder="Powtórz hasło" required minlength="6">
+          <div class="input-group" class="form-control" style="width: 50%;">
+            <input type="password" class="form-control" id="password_hidden2" name="repeatPassword" placeholder="Powtórz hasło" required minlength="6">
+            <span class="input-group-btn">
+              <button class="btn btn-default reveal2" style="background-color:white; margin-top:2px; height:35px;"  type="button"><img src="eye_hidden.png" style="margin-top:-6px;" width="25"></button>
+            </span>          
+          </div>
           <br>       
           <input type="checkbox" id="regulamin" required/>
           <label for="regulamin">Akceptuję </label>
@@ -136,5 +146,24 @@
 
 
     </div>
+    <script>
+    //Skrypt na odkrywanie hasła
+    $(".reveal").on('click',function() {
+        var pwd = document.getElementById("password_hidden")
+        if (pwd.type === 'password') {
+            pwd.type="text";
+        } else {
+            pwd.type="password"
+        }
+    });
+    $(".reveal2").on('click',function() {
+        var pwd = document.getElementById("password_hidden2")
+        if (pwd.type === 'password') {
+            pwd.type="text";
+        } else {
+            pwd.type="password"
+        }
+    });
+    </script>
   </body>
 </html>
