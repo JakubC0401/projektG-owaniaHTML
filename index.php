@@ -85,6 +85,9 @@
           <br>
         </form>
       </div>
+      <div class="footer">
+        <p>©2020 Author: Jakub Czyż, Błażej Aleksandrzak, Dawid Badura</p>
+      </div>
     </div>
     <script>
     //Skrypt na odkrywanie hasła

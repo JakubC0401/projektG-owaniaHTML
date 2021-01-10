@@ -126,7 +126,8 @@
           </p>          
         </div>
       </div>
-      <script>        
+      <script>
+      //Skrypt na regulamin w oknie popup        
         var modal = document.getElementById("popUp"); 
         var clickText = document.getElementById("regulaminTxt");
         var span = document.getElementsByClassName("close")[0];
@@ -144,7 +145,9 @@
         </script>
         <!-- koniec Regulamin jakis -->
 
-
+      <div class="footer">
+        <p>©2020 Author: Jakub Czyż, Błażej Aleksandrzak, Dawid Badura</p>
+      </div>
     </div>
     <script>
     //Skrypt na odkrywanie hasła
