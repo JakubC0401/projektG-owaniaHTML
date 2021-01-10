@@ -53,7 +53,7 @@
       <div class="test">
         <header class="siteLogo"> 
           <img src="Pagelogo.png" width="50px" height="50px"> 
-          <a href="index.html" style="text-decoration: none; color: black"><h1>Todo List</h1></a>      
+          <a href="index.php" style="text-decoration: none; color: black"><h1>Todo List</h1></a>      
         </header>
       </div>
       <!--endheader-->
