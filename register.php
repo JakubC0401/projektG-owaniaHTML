@@ -1,7 +1,7 @@
 
 <?php        
   //$conn = mysqli_connect("userdb1", "1202557_i5E183", "zG1MPHPlyigmJ8", '1202557_i5E183');
-  $conn = mysqli_connect("localhost", "root", "", 'user');
+  $conn = mysqli_connect("localhost", "root", "", 'users');
   if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
   }
