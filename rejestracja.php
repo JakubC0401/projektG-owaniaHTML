@@ -39,7 +39,4 @@
         echo "<h2>Uzupełnij wymagane dane!</h2>";
     }
 
-    function isDataCorrect($data){
-        
-    }
 ?>
