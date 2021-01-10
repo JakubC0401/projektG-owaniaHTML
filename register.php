@@ -65,7 +65,7 @@
       </div>
       <!--endheader-->
      
-      <div class="logBox">
+      <div class="registerBox">
         <form method="post">
           <h1  class="font-weight-normal text-primary">REJESTRACJA</h1>
           <br>
@@ -145,9 +145,9 @@
         </script>
         <!-- koniec Regulamin jakis -->
 
-      <div class="footer">
+      <footer class="myFooter">
         <p>©2020 Author: Jakub Czyż, Błażej Aleksandrzak, Dawid Badura</p>
-      </div>
+      </footer>
     </div>
     <script>
     //Skrypt na odkrywanie hasła
