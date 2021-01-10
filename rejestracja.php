@@ -12,6 +12,7 @@
         // usuwamy spacje, tagi html oraz niebezpieczne znaki
         return mysql_real_escape_string(htmlspecialchars(trim($zmienna)));
     } 
+
     if (isset($_POST['sumbit']))
     {    
         $login = filtruj($_POST['login']);
@@ -36,5 +37,9 @@
     else
     {
         echo "<h2>Uzupełnij wymagane dane!</h2>";
+    }
+
+    function isDataCorrect($data){
+        
     }
 ?>

@@ -97,3 +97,7 @@ h1{
       color: rgb(2, 2, 124);
   }
 
+  input:invalid {
+    border: 1px solid red;
+  }
+

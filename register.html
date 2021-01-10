@@ -38,12 +38,12 @@
           <br>         
           <input style="width: 50%;" class="form-control" name="login" placeholder="Login" required>
           <br>         
-          <input style="width: 50%;" class="form-control" type="email" name="email" placeholder="Email">
+          <input style="width: 50%;" class="form-control" type="email" name="email" placeholder="Email" required>
           <br>
-          <input style="width: 50%;" type="password" class="form-control" name="password" placeholder="Hasło" required>
+          <input style="width: 50%;" type="password" class="form-control" name="password" placeholder="Hasło" required minlength="6">
           <br>
-          <input style="width: 50%;" type="password" class="form-control" name="repeatPassword" placeholder="Powtórz hasło" required>
-<br>          
+          <input style="width: 50%;" type="password" class="form-control" name="repeatPassword" placeholder="Powtórz hasło" required minlength="6">
+          <br>          
           <input type="checkbox" id="regulamin"/>
           <label for="regulamin">Akceptuję </label>
           <label id="regulaminTxt" class="onText"><u>regulamin</u></label>
