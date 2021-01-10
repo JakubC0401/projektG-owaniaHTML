@@ -79,8 +79,8 @@
                 }
             ?> 
           <input type="submit" class="btn btn-primary" name="zaloguj" value="Zaloguj">
-          <br>
-          <a class="registerLink" href="register.php">Nie masz konta, zarejestruj się!</a>
+          <br><br>
+          <a class="registerLink" style="text-decoration: none;" href="register.php">Nie masz konta, zarejestruj się!</a>
           <br>
           <br>
         </form>

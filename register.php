@@ -106,7 +106,7 @@
           <br> 
           <br>          
         </form>
-        <a class="registerLink" href="index.php">Masz konto? Zaloguj się!</a>
+        <a class="registerLink" style="text-decoration: none;" href="index.php">Masz konto? Zaloguj się!</a>
         <br>
         <br>
         
