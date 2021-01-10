@@ -66,7 +66,7 @@
           <input style="width: 50%;" name="login"  class="form-control" placeholder="Login" required>
           <br>
           <div class="input-group" class="form-control" style="width: 50%;">
-            <input type="password" class="form-control" id="password_hidden" name="password" placeholder="Hasło">
+            <input type="password" class="form-control" id="password_hidden" name="password" placeholder="Hasło" required>
             <span class="input-group-btn">
               <button class="btn btn-default reveal" style="background-color:white; margin-top:2px; height:35px;"  type="button"><img src="eye_hidden.png" style="margin-top:-6px;" width="25"></button>
             </span>          
