@@ -23,7 +23,7 @@
               mysqli_query($conn,"INSERT INTO `user` (`login`, `password`)
                   VALUES ('".$login."', '".md5($haslo1)."');");                
               echo "<h2>Konto zostało stworzone!</h2>";
-              header("Location: index.html");
+              header("Location: index.php");
           }
           else echo "<h2>Hasła nie są takie same!</h2>";
       }
@@ -79,8 +79,8 @@
                     echo '<div class="error">'.$_SESSION['e_login'].'</div>';
                     unset($_SESSION['e_login']);
                 }
-            ?>
-          <br>         
+            ?> 
+                     <br>         
           <input style="width: 50%;" class="form-control" type="email" name="email" placeholder="Email" required>
           <br>
           <input style="width: 50%;" type="password" class="form-control" name="password" placeholder="Hasło" required minlength="6">
