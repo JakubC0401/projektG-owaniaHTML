@@ -84,14 +84,14 @@
           <input style="width: 50%;" class="form-control" type="email" name="email" placeholder="Email" required>
           <br>
           <div class="input-group" class="form-control" style="width: 50%;">
-            <input type="password" class="form-control" id="password_hidden" name="password" placeholder="Hasło" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Hasło musi zawierać przynajmniej jedną małą i dużą literę, jedną cyfrę i 6 lub więcej znaków" required>
+            <input type="password" class="form-control" id="password_hidden" name="password" placeholder="Hasło" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Hasło musi zawierać przynajmniej jedną małą i dużą literę, jedną cyfrę i 6 lub więcej znaków" required>
             <span class="input-group-btn">
               <button class="btn btn-default reveal" style="background-color:white; margin-top:2px; height:35px;"  type="button"><img src="eye_hidden.png" style="margin-top:-6px;" width="25"></button>
             </span>          
           </div>
           <br>
           <div class="input-group" class="form-control" style="width: 50%;">
-            <input type="password" class="form-control" id="password_hidden2" name="repeatPassword" placeholder="Powtórz hasło" required minlength="6">
+            <input type="password" class="form-control" id="password_hidden2" name="repeatPassword" placeholder="Powtórz hasło" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" title="Hasło musi zawierać przynajmniej jedną małą i dużą literę, jedną cyfrę i 6 lub więcej znaków" required>
             <span class="input-group-btn">
               <button class="btn btn-default reveal2" style="background-color:white; margin-top:2px; height:35px;"  type="button"><img src="eye_hidden.png" style="margin-top:-6px;" width="25"></button>
             </span>          
