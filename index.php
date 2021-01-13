@@ -1,6 +1,6 @@
 <?php
   session_start();
-  $conn = mysqli_connect("localhost", "root", "", 'users');
+  $conn = mysqli_connect("localhost", "root", "", 'user');
   //$conn = mysqli_connect("userdb1", "1202557_i5E183", "zG1MPHPlyigmJ8", '1202557_i5E183');
   if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
@@ -85,9 +85,9 @@
           <br>
         </form>
       </div>
-      <div class="footer">
+      <footer class="footer">
         <p>©2020 Author: Jakub Czyż, Błażej Aleksandrzak, Dawid Badura</p>
-      </div>
+      </footer>
     </div>
     <script>
     //Skrypt na odkrywanie hasła

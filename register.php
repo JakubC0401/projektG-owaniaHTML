@@ -1,7 +1,7 @@
 
 <?php        
   //$conn = mysqli_connect("userdb1", "1202557_i5E183", "zG1MPHPlyigmJ8", '1202557_i5E183');
-  $conn = mysqli_connect("localhost", "root", "", 'users');
+  $conn = mysqli_connect("localhost", "root", "", 'user');
   if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
   }
@@ -145,7 +145,7 @@
         </script>
         <!-- koniec Regulamin jakis -->
 
-      <footer class="myFooter">
+      <footer class="footer">
         <p>©2020 Author: Jakub Czyż, Błażej Aleksandrzak, Dawid Badura</p>
       </footer>
     </div>
