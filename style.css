@@ -182,7 +182,6 @@ h1{
   }
   .mainpageheader > li > a
   {
-  
     height: 70px;
     display: block;
     float: left;
@@ -200,13 +199,17 @@ h1{
     background-color:#0353bd;
     text-decoration: none;
   }
-  .button1
+  .button1:hover
+  {
+    height:500px;
+  }
+  .AnimateButton
   {
     transition: transform 0.5s ease-in-out;
   }
-  .button1:hover
+  .AnimateButton:hover
   {
-   height: 500px;
-    
+    transform: scale(1.05);
+    opacity: 1;
   }
   

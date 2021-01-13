@@ -20,10 +20,10 @@
 
     <div >
         <ul class="mainpageheader">
-            <li><a href="link">Przycisk 1</a></li>
-            <li><a href="link">Przycisk 2</a></li>
-            <li><a href="link">Przycisk 3</a></li>
-            <li><a href="link">konto</a></li>
+            <li><a href="link" class="AnimateButton">Przycisk 1</a></li>
+            <li><a href="link" class="AnimateButton">Przycisk 2</a></li>
+            <li><a href="link" class="AnimateButton">Przycisk 3</a></li>
+            <li><a href="link" class="AnimateButton">konto</a></li>
         </nav>     
     </div>
     <div class="menu">
