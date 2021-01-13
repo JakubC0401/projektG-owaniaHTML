@@ -1,7 +1,7 @@
 
 <?php        
   //$conn = mysqli_connect("userdb1", "1202557_i5E183", "zG1MPHPlyigmJ8", '1202557_i5E183');
-  $conn = mysqli_connect("localhost", "root", "", 'user');
+  $conn = mysqli_connect("localhost", "root", "", 'users');
   if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
   }
@@ -38,10 +38,10 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Todo List</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="shortcut icon" href="PageLogo.png" type="image">
 
     
     <link rel="preconnect" href="https://fonts.gstatic.com">
