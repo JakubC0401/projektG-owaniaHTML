@@ -29,7 +29,10 @@
     <div class="menu">
         <nav>
         <ul class="NotesNav">
-            <li><a href="link" class="button1">do zrobienia </a></li>
+            <li>                
+                <a href="link" class="movedown">do zrobienia </a>
+            </li>
+            
             <li><a href="link" class="button1">zrobione</a></li>
             <li><a href="link" class="button1">w planach</a></li>
             <li><a href="link" class="button1">konto</a></li>
@@ -38,4 +41,6 @@
     </div>
     
     </body>
+    
+
 </html>

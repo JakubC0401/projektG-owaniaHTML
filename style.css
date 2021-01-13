@@ -202,10 +202,7 @@ h1{
     background-color:#0353bd;
     text-decoration: none;
   }
-  .button1:hover
-  {
-    height:500px;
-  }
+  
   .AnimateButton
   {
     transition: transform 0.5s ease-in-out;
@@ -214,5 +211,15 @@ h1{
   {
     transform: scale(1.05);
     opacity: 1;
+  }
+
+  .movedown {
+    height: 75px;
+    overflow: hidden;
+    transition: height 1s;
+  }
+  
+  .movedown:hover {
+    height: 500px;
   }
   
