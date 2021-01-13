@@ -17,15 +17,20 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-
-    <div >
+    <div class="test">
+        <header class="siteLogo"> 
+          <img src="Pagelogo.png" width="50px" height="50px"> 
+          <a href="index.php" style="text-decoration: none; color: black"><h1>Todo List</h1></a>   
+        </header>
+        <div>
         <ul class="mainpageheader">
-            <li><a href="link" class="AnimateButton">Przycisk 1</a></li>
-            <li><a href="link" class="AnimateButton">Przycisk 2</a></li>
-            <li><a href="link" class="AnimateButton">Przycisk 3</a></li>
-            <li><a href="link" class="AnimateButton">konto</a></li>
-        </nav>     
+            <li><a href="link">REGULAMIN</a></li>
+            <li><a href="link">KONTO</a></li>
+            <li><a href="link">WYLOGUJ</a></li>
+        </nav> 
+        </div>    
     </div>
+
     <div class="menu">
         <nav>
         <ul class="NotesNav">
