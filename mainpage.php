@@ -24,9 +24,9 @@
         </header>
         <div>
         <ul class="mainpageheader">
-            <li><a href="link">REGULAMIN</a></li>
-            <li><a href="link">KONTO</a></li>
-            <li><a href="link">WYLOGUJ</a></li>
+            <li><a class="AnimateButton" href="link">REGULAMIN</a></li>
+            <li><a class="AnimateButton" href="link">KONTO</a></li>
+            <li><a class="AnimateButton" href="link">WYLOGUJ</a></li>
         </nav> 
         </div>    
     </div>
@@ -35,21 +35,21 @@
         <nav>
         <ul class="NotesNav">
             <li class="movedown">
-                <a href="link" >Do zrobienia </a><br><br>
+                <a href="link" >ZAKUPY</a><br><br>
                 <ul style="list-style-type:none">
                     <li><a href="">asdasdasd</a></li>
                     <li><a href="">Zakupy </a></li>                    
                 </ul>
             </li>            
             <li class="movedown">
-                <a href="link" >zrobione</a><br><br>
+                <a href="link">STUDIA</a><br><br>
                 <ul style="list-style-type:none">
                     <li><a href="">asdasdasd</a></li>
                     <li><a href="">ertert </a></li>                    
                 </ul>
             </li>
             <li class="movedown">
-                <a href="link" >w planach</a><br><br>
+                <a href="link">WAKACJE</a><br><br>
                 <ul style="list-style-type:none">
                     <li><a href="">asdasdasd</a></li>
                     <li><a href="">ddfg </a></li>
@@ -57,7 +57,7 @@
                 </ul>
             </li>
             <li class="movedown">
-                <a href="link" >konto</a><br><br>
+                <a href="link">ZAJĘCIA</a><br><br>
                 <ul style="list-style-type:none">
                     <li><a href="">asasddasdasd</a></li>
                     <li><a href="">123 </a></li>                    
