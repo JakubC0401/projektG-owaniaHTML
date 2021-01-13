@@ -29,11 +29,36 @@
     <div class="menu">
         <nav>
         <ul class="NotesNav">
-            <li><a href="link" class="movedown">do zrobienia </a></li>
-            
-            <li><a href="link" class="movedown">zrobione</a></li>
-            <li><a href="link" class="movedown">w planach</a></li>
-            <li><a href="link" class="movedown">konto</a></li>
+            <li class="movedown">
+                <a href="link" >Do zrobienia </a><br><br>
+                <ul style="list-style-type:none">
+                    <li><a href="">asdasdasd</a></li>
+                    <li><a href="">Zakupy </a></li>                    
+                </ul>
+            </li>            
+            <li class="movedown">
+                <a href="link" >zrobione</a><br><br>
+                <ul style="list-style-type:none">
+                    <li><a href="">asdasdasd</a></li>
+                    <li><a href="">ertert </a></li>                    
+                </ul>
+            </li>
+            <li class="movedown">
+                <a href="link" >w planach</a><br><br>
+                <ul style="list-style-type:none">
+                    <li><a href="">asdasdasd</a></li>
+                    <li><a href="">ddfg </a></li>
+                    <li><a href="">ertert </a></li>                    
+                </ul>
+            </li>
+            <li class="movedown">
+                <a href="link" >konto</a><br><br>
+                <ul style="list-style-type:none">
+                    <li><a href="">asasddasdasd</a></li>
+                    <li><a href="">123 </a></li>                    
+                </ul>
+            </li>
+        </ul>
         </nav>     
 
     </div>
