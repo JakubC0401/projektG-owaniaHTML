@@ -46,8 +46,6 @@ html, body{
   font-size: small; 
 }
 
-
-
 h1{
     font-family: 'Oswald', sans-serif;
 }
@@ -139,4 +137,76 @@ h1{
     border: 1px solid red;
   }
 
+  .NotesNav
+  {
+    float: left;
+    width: 100%;
+    padding:0;
+    margin:0;
+    list-style:none;
+  }
+  .NotesNav > li > a
+  {
+    height: 70px;
+    display: block;
+    float: left;
+    text-align: center;
+    font-size: 20px;
+    width:24.945%;
+    text-decoration: none;
+    color:darkgray;
+    background-color:#ffffff;
+    border-radius: 0px 0px 30px 30px;
+    box-shadow: 0px 5px 5px gray;
+
+  }
+  .NotesNav > li > a:hover
+  {
+    color:white;
+    background-color:#dddddd;
+    text-decoration: none;
+
+  }
+  .mainpageheader
+  {
+    
+    display: block;
+    background-color:#0275d8;
+    float: left;
+    width: 100%;
+    padding:0;
+    margin:0;
+    list-style:none;
+    border-bottom: 1px #0353bd;
+
+  }
+  .mainpageheader > li > a
+  {
+  
+    height: 70px;
+    display: block;
+    float: left;
+    text-align: center;
+    font-size: 20px;
+    width:24.945%;
+    text-decoration: none;
+    color:white;
+    background-color:#0275d8;
+    margin: 0px 1px 1px 0px;
+  }
+  .mainpageheader > li > a:hover
+  {
+    color:white;
+    background-color:#0353bd;
+    text-decoration: none;
+  }
+  .button1
+  {
+    transition: transform 0.5s ease-in-out;
+  }
+  .button1:hover
+  {
+   height: 500px;
+    
+  }
   
