@@ -192,6 +192,9 @@ h1{
     color:white;
     background-color:#0275d8;
     margin: 0px 1px 1px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .mainpageheader > li > a:hover
   {
