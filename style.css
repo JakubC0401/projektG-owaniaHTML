@@ -238,5 +238,8 @@ h1{
   .movedown:hover {
     height: 500px;
   }
+  p{
+    font-size: 12px;
+  }
   
   

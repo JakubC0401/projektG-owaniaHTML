@@ -4,7 +4,7 @@ function addNewNote($tabela, $buttonName){
     if(isset($_POST[$buttonName])){
         $sql = "INSERT INTO ". $tabela ." (notatka) VALUES ('".$_POST["newNote"]."')";   
         if ($conn->query($sql))
-            echo "Dodano notatkę!<br>";
+            echo "<p>Dodano notatkę!</p><br>";
         else 
             echo "Error: " . $sql . "<br>" . $conn->error;
     } 
@@ -77,7 +77,7 @@ function showNotes($tabela){
                     <form method="POST">
                         <input type="text" placeholder="Wpisz notatkę" name="newNote" class="form-control" style="width: 50%; float: left;"/>
                         <input type="submit" value="Dodaj" name="dodajStudia" class="btn btn-secondary"/>
-                    </form>                             
+                    </form><br>                           
                         <?php 
                             addNewNote("studia","dodajStudia");
                             showNotes("studia");
@@ -90,7 +90,7 @@ function showNotes($tabela){
                     <form method="POST">
                         <input type="text" placeholder="Wpisz notatkę" name="newNote" class="form-control" style="width: 50%; float: left;"/>
                         <input type="submit" value="Dodaj" name="dodajWakacje" class="btn btn-secondary"/>
-                    </form>                             
+                    </form><br>                             
                         <?php 
                             addNewNote("wakacje","dodajWakacje");
                             showNotes("wakacje");
@@ -103,7 +103,7 @@ function showNotes($tabela){
                     <form method="POST">
                         <input type="text" placeholder="Wpisz notatkę" name="newNote" class="form-control" style="width: 50%; float: left;"/>
                         <input type="submit" value="Dodaj" name="dodajZajecia" class="btn btn-secondary"/>
-                    </form>                             
+                    </form><br>                             
                         <?php 
                             addNewNote("zajecia","dodajZajecia");
                             showNotes("zajecia");
