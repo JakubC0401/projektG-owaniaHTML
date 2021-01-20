@@ -234,6 +234,13 @@ h1{
     overflow: hidden;
     transition: height 1s;
   }
+  .movedown:hover
+  {
+    height: 75px;
+    
+    transition: height 1s;
+    overflow: auto;
+  }
   
   .movedown:hover {
     height: 500px;
@@ -272,6 +279,21 @@ h1{
 }
 .accountWrapper>b
 {
-  
   opacity: 50%;
 }  
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+ 
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(122, 163, 252);
+  border-radius: 10px;
+}

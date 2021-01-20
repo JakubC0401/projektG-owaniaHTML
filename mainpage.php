@@ -66,20 +66,24 @@ function showNotes($tabela){
                 <ul style="list-style-type:none">     
                     <form method="POST">
                         <input type="text" placeholder="Wpisz notatkę" name="newNote" class="form-control" style="width: 50%; float: left;"/>
-                        <input type="submit" value="Dodaj" name="dodajZakupy" class="btn btn-secondary"/>
+                        <input type="submit" value="Dodaj" name="dodajZakupy" class="btn btn-success"/>
+                        <input type="submit" value="Usuń" name="usuńZakupy" class="btn btn-danger"/>
                     </form><br>                             
                         <?php 
                             addNewNote("zakupy","dodajZakupy");
                             showNotes("zakupy");
-                        ?>                    
+                        ?>    
+                                   
                 </ul>
+                 
             </li>            
             <li class="movedown">
                 <a href="link">STUDIA</a><br><br>
                 <ul style="list-style-type:none">
                     <form method="POST">
                         <input type="text" placeholder="Wpisz notatkę" name="newNote" class="form-control" style="width: 50%; float: left;"/>
-                        <input type="submit" value="Dodaj" name="dodajStudia" class="btn btn-secondary"/>
+                        <input type="submit" value="Dodaj" name="dodajStudia" class="btn btn-success"/>
+                        <input type="submit" value="Usuń" name="usuńZakupy" class="btn btn-danger"/>
                     </form><br>                           
                         <?php 
                             addNewNote("studia","dodajStudia");
@@ -92,7 +96,8 @@ function showNotes($tabela){
                 <ul style="list-style-type:none">
                     <form method="POST">
                         <input type="text" placeholder="Wpisz notatkę" name="newNote" class="form-control" style="width: 50%; float: left;"/>
-                        <input type="submit" value="Dodaj" name="dodajWakacje" class="btn btn-secondary"/>
+                        <input type="submit" value="Dodaj" name="dodajWakacje" class="btn btn-success"/>
+                        <input type="submit" value="Usuń" name="usuńZakupy" class="btn btn-danger"/>
                     </form><br>                             
                         <?php 
                             addNewNote("wakacje","dodajWakacje");
@@ -105,12 +110,14 @@ function showNotes($tabela){
                 <ul style="list-style-type:none">
                     <form method="POST">
                         <input type="text" placeholder="Wpisz notatkę" name="newNote" class="form-control" style="width: 50%; float: left;"/>
-                        <input type="submit" value="Dodaj" name="dodajZajecia" class="btn btn-secondary"/>
+                        <input type="submit" value="Dodaj" name="dodajZajecia" class="btn btn-success"/>
+                        <input type="submit" value="Usuń" name="usuńZakupy" class="btn btn-danger"/>
                     </form><br>                             
                         <?php 
                             addNewNote("zajecia","dodajZajecia");
                             showNotes("zajecia");
-                        ?>                    
+                        ?>
+                                    
                 </ul>
             </li>
         </ul>
