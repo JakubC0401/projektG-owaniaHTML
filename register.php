@@ -19,7 +19,7 @@
       {
           if ($haslo1 == $haslo2)
           {
-              mysqli_query($conn,"INSERT INTO `users` (`login`, `password`)
+              mysqli_query($conn,"INSERT INTO `user` (`login`, `password`)
                   VALUES ('".$login."', '".md5($haslo1)."');");                
               echo "<h2>Konto zostało stworzone!</h2>";
               header("Location: index.php");
