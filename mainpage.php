@@ -44,11 +44,11 @@ function showNotes($tabela){
     <div class="test">
         <header class="siteLogo"> 
           <img src="Pagelogo.png" width="50px" height="50px"> 
-          <a href="index.php" style="text-decoration: none; color: black"><h1>Todo List</h1></a>   
+          <a href="" style="text-decoration: none; color: black"><h1>Todo List</h1></a>
         </header>
         <div>
             <ul class="mainpageheader">
-                <li><a class="AnimateButton" href="link">REGULAMIN</a></li>
+                <li><a class="AnimateButton" href="regulamin.php">REGULAMIN</a></li>
                 <li><a class="AnimateButton" href="link">KONTO</a></li>
                 <li><a class="AnimateButton" href="link">WYLOGUJ</a></li>
             </ul> 

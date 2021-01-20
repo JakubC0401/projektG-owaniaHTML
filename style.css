@@ -242,4 +242,14 @@ h1{
     font-size: 12px;
   }
   
+.regulaminBox
+{
+  float:left;
+  width:90%;
+  padding:20px;
+  background:rgba(78, 78, 78, 0.1);
+  border: 0.5px solid color gray ;
+  margin-left:5%;
+  margin-top: 5%;
+}
   
