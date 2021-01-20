@@ -29,7 +29,7 @@
         <div>
             <ul class="mainpageheader">
                 <li><a class="AnimateButton" href="mainpage.php">STRONA GŁÓWNA</a></li>
-                <li><a class="AnimateButton" href="link">KONTO</a></li>
+                <li><a class="AnimateButton" href="accountpage.php">KONTO</a></li>
                 <li><a class="AnimateButton" href="link">WYLOGUJ</a></li>
             </ul> 
         </div>    
