@@ -51,14 +51,7 @@
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     
     <div class="wrapper">
-      <!--header-->
-      <div class="test">
-        <header class="siteLogo"> 
-          <img src="Pagelogo.png" width="50px" height="50px"> 
-          <a href="index.php" style="text-decoration: none; color: black"><h1>Todo List</h1></a>      
-        </header>
-      </div>
-      <!--endheader-->
+      <?php require('basicHeader.html'); ?>
       
 
       <div class="logBox">
