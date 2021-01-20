@@ -252,4 +252,12 @@ h1{
   margin-left:5%;
   margin-top: 5%;
 }
+.accountWrapper>h1
+{
+  font-size: 70px;
+}
+.accountWrapper>b
+{
   
+  opacity: 50%;
+}  
