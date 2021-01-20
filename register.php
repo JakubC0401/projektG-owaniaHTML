@@ -1,7 +1,7 @@
 
 <?php        
-  //$conn = mysqli_connect("userdb1", "1202557_i5E183", "zG1MPHPlyigmJ8", '1202557_i5E183');
-  $conn = mysqli_connect("localhost", "root", "", 'users');
+  require_once "config.php";
+  $conn = mysqli_connect($host, $user, $password, $db);
   if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
   }
