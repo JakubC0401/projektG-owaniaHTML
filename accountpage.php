@@ -25,11 +25,7 @@
         </header>
         <div>
             <ul class="mainpageheader">
-<<<<<<<
-                <li><a class="AnimateButton" href="regulamin.php">REGULAMIN</a></li>
-=======
                 <li><a class="AnimateButton" id="regulaminTxt">REGULAMIN</a></li>
->>>>>>>
                 <li><a class="AnimateButton" href="mainpage.php">STRONA GŁÓWNA</a></li>
                 <li><a class="AnimateButton" href="link">WYLOGUJ</a></li>
             </ul> 
