@@ -1,5 +1,6 @@
 <?php
   session_start();
+  //elo
   $conn = mysqli_connect("localhost", "root", "", 'users');
   //$conn = mysqli_connect("userdb1", "1202557_i5E183", "zG1MPHPlyigmJ8", '1202557_i5E183');
   if (!$conn) {
