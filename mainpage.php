@@ -17,12 +17,12 @@ function showNotes($tabela){
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
             echo "<li>
-                    <form method='POST' action=''>
+                    <form method='POST'>
                         <p>" . $row['notatka'] . "
                         <input type='hidden' name='myId' value='". $row['id']. "'>
                         <input type='hidden' name='tabela' value='". $tabela. "'>
-                        <input type='image' alt='delete' src='crossmark.png' width='12' height='12'
-                            name = 'delete' value='delete'/>
+                        <input type='submit' alt='delete' src='crossmark.png' width='12' height='12'
+                            name = 'delete' value='delete' class='btn btn-danger btn-xs'/>
                         </p>
                     </form>
                 </li>
@@ -210,11 +210,9 @@ if(isset($_POST["delete"])){
     if (!$conn) {
       die("Connection failed: " . mysqli_connect_error());
     }
-    echo "USUN";
     $sql = "DELETE FROM " .$_POST["tabela"]. " WHERE id = ". $toRemove;
-
     if ($conn->query($sql)) {
-    echo "Usunięto!";
+    echo "";
     } else {
     echo "Error : " . $conn->error;
     }
