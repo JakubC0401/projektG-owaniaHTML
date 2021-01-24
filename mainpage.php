@@ -124,13 +124,14 @@ function addFirstName($karta){
         <ul class="NotesNav">
             <li class="movedown">                    
                 <label><?php showName("pierwszakarta"); ?></label> 
-                <button onclick="showForm('changeNameForm1')">zmień</button>                
+                <button class="transparentButton" onclick="showForm('changeNameForm1')"><img src='edit.png'
+                        style=" width:20px; height:20px;" ></button>
+                <ul style="list-style-type:none">
                 <form method="POST" id="changeNameForm1" style="display:none;">
                     <input type="text" placeholder="Wpisz nazwę" name="newName" class="form-control" style="width: 50%; float: left;"/>
                     <input type="hidden" name="id" id="id" value="1"/>
                     <input type="submit" value="Zmień" name="change" class="btn btn-secondary"/>
-                </form>
-                <ul style="list-style-type:none">     
+                </form>     
                 <form method="POST">
                     <input type="text" placeholder="Wpisz notatkę" name="newNote" class="form-control" style="width: 50%; float: left;"/>
                     <input type="submit" value="Dodaj" name="dodajZakupy" class="btn btn-secondary"/>
@@ -143,13 +144,14 @@ function addFirstName($karta){
             </li>            
             <li class="movedown">
                 <label><?php showName("drugakarta"); ?></label>
-                <button onclick="showForm('changeNameForm2')">zmień</button>                
+                <button class="transparentButton" onclick="showForm('changeNameForm2')"><img src='edit.png'
+                        style=" width:20px; height:20px;" ></button> 
+                <ul style="list-style-type:none">
                 <form method="POST" id="changeNameForm2" style="display:none;">
                     <input type="text" placeholder="Wpisz nazwę" name="newName" class="form-control" style="width: 50%; float: left;"/>
                     <input type="hidden" name="id" id="id" value="2"/>
                     <input type="submit" value="Zmień" name="change" class="btn btn-secondary"/>
                 </form>
-                <ul style="list-style-type:none">
                     <form method="POST">
                         <input type="text" placeholder="Wpisz notatkę" name="newNote" class="form-control" style="width: 50%; float: left;"/>
                         <input type="submit" value="Dodaj" name="dodajStudia" class="btn btn-secondary"/>
@@ -162,13 +164,14 @@ function addFirstName($karta){
             </li>
             <li class="movedown">
                 <label><?php showName("trzeciakarta"); ?></label>
-                <button onclick="showForm('changeNameForm3')">zmień</button>                
+                <button class="transparentButton" onclick="showForm('changeNameForm3')"><img src='edit.png'
+                        style=" width:20px;height:20px;" ></button>
+                <ul style="list-style-type:none">
                 <form method="POST" id="changeNameForm3" style="display:none;">
                     <input type="text" placeholder="Wpisz nazwę" name="newName" class="form-control" style="width: 50%; float: left;"/>
                     <input type="hidden" name="id" id="id" value="3"/>
                     <input type="submit" value="Zmień" name="change" class="btn btn-secondary"/>
                 </form>
-                <ul style="list-style-type:none">
                     <form method="POST">
                         <input type="text" placeholder="Wpisz notatkę" name="newNote" class="form-control" style="width: 50%; float: left;"/>
                         <input type="submit" value="Dodaj" name="dodajWakacje" class="btn btn-secondary"/>
@@ -181,13 +184,14 @@ function addFirstName($karta){
             </li>
             <li class="movedown">
                 <label><?php showName("czwartakarta"); ?></label>
-                <button onclick="showForm('changeNameForm4')">zmień</button>                
+                <button class="transparentButton" onclick="showForm('changeNameForm4')"><img src='edit.png'
+                        style=" width:20px; height:20px;" ></button>
+                <ul style="list-style-type:none">
                 <form method="POST" id="changeNameForm4" style="display:none;">
                     <input type="text" placeholder="Wpisz nazwę" name="newName" class="form-control" style="width: 50%; float: left;"/>
                     <input type="hidden" name="id" id="id" value="4"/>
                     <input type="submit" value="Zmień" name="change" class="btn btn-secondary"/>
                 </form>
-                <ul style="list-style-type:none">
                     <form method="POST">
                         <input type="text" placeholder="Wpisz notatkę" name="newNote" class="form-control" style="width: 50%; float: left;"/>
                         <input type="submit" value="Dodaj" name="dodajZajecia" class="btn btn-secondary"/>

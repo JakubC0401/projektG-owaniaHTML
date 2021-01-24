@@ -312,3 +312,12 @@ h1{
   background: rgb(122, 163, 252);
   border-radius: 10px;
 }
+
+.transparentButton{
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+}
