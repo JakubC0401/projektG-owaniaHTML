@@ -17,7 +17,14 @@ function showNotes($tabela){
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
             echo "<li>
-                    <p>" . $row['notatka'] . "</p>
+                    <form method='POST' action=''>
+                        <p>" . $row['notatka'] . "
+                        <input type='hidden' name='myId' value='". $row['id']. "'>
+                        <input type='hidden' name='tabela' value='". $tabela. "'>
+                        <input type='image' alt='delete' src='crossmark.png' width='12' height='12'
+                            name = 'delete' value='delete'/>
+                        </p>
+                    </form>
                 </li>
                 <br>";
         }
@@ -32,7 +39,7 @@ function changeName($newName, $id){
       } else {
         echo "Error updating record: " . $conn->error;        
       } 
-    header("refresh: 1") ;
+    header("mainpage.php") ;
 }
 
 function showName($karta){
@@ -197,6 +204,21 @@ if(isset($_POST["change"])){
         $id = $_POST["id"];    
         changeName($newName, $id);            
     }
+if(isset($_POST["delete"])){
+    $toRemove = $_POST['myId'];
+    $conn = mysqli_connect("localhost", "root", "", 'notes');
+    if (!$conn) {
+      die("Connection failed: " . mysqli_connect_error());
+    }
+    echo "USUN";
+    $sql = "DELETE FROM " .$_POST["tabela"]. " WHERE id = ". $toRemove;
+
+    if ($conn->query($sql)) {
+    echo "Usunięto!";
+    } else {
+    echo "Error : " . $conn->error;
+    }
+}
 ?>
 </body>
 </html>
