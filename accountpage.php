@@ -27,7 +27,7 @@
     <div class="test">
         <header class="siteLogo"> 
           <img src="Pagelogo.png" width="50px" height="50px"> 
-          <a href="index.php" style="text-decoration: none; color: black"><h1>Todo List</h1></a>   
+          <a href="mainpage.php" style="text-decoration: none; color: black"><h1>Todo List</h1></a>   
         </header>
         <div>
             <ul class="mainpageheader">
@@ -48,7 +48,9 @@
         <br>
         <img width="150px" height="150px" src="UserLogo.png">
         <br><br>
-        <b>IMIE:</b><?php echo $_SESSION['login']?>
+        <b>IMIE:</b>
+        <br>
+        <?php echo $_SESSION['login']?>
         <br>
         <br>
         <b>NAZWISKO:</b>

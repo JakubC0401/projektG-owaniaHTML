@@ -94,7 +94,7 @@
           <label id="regulaminTxt" class="onText"><u>regulamin</u></label>
           <br>
           <br> 
-          <button type="submit" class="btn btn-primary" name="sumbit">Zarejestruj się</button>
+         
           <br> 
           <br>          
         </form>
