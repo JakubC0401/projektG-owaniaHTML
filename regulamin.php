@@ -1,3 +1,4 @@
+<?php ob_start(); ?>
 <!-- Regulamin jakis -->
 <div class="modal" id="popUp">
         <div class="modal-content">

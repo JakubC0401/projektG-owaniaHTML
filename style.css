@@ -236,15 +236,30 @@ h1{
   }
   .movedown:hover
   {
+    height: 75px;    
+    transition: height 1s;
+    overflow: auto;
+  }  
+  .movedown:hover {
+    height: 500px;
+  }
+
+  .movedownSmall {
     height: 75px;
-    
+    overflow: hidden;
+    transition: height 1s;
+  }
+  .movedownSmall:hover
+  {
+    height: 75px;    
     transition: height 1s;
     overflow: auto;
   }
   
-  .movedown:hover {
-    height: 500px;
+  .movedownSmall:hover {
+    height: 150px;
   }
+
   p{
     font-size: 12px;
   }
