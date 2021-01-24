@@ -41,7 +41,7 @@ function changeName($newName, $id){
       } else {
         echo "Error updating record: " . $conn->error;        
       } 
-    header("mainpage.php") ;
+    header("Location: mainpage.php") ;
 }
 
 function showName($karta){
@@ -219,6 +219,7 @@ if(isset($_POST["delete"])){
     } else {
     echo "Error : " . $conn->error;
     }
+    header("Location: mainpage.php") ;
 }
 ?>
 
