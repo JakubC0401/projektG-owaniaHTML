@@ -13,18 +13,21 @@
       $login = $_POST['login'];
       $haslo1 = $_POST['password'];
       $haslo2 = $_POST['repeatPassword'];
-      $sql = "SELECT login FROM users WHERE login = '" .$login. "';";
+      $sql = "SELECT login FROM user WHERE login = '" .$login. "';";
       $x = mysqli_num_rows(mysqli_query($conn, $sql));
       if ( $x == 0)
       {
           if ($haslo1 == $haslo2)
           {
-              mysqli_query($conn,"INSERT INTO `users` (`login`, `password`)
+              mysqli_query($conn,"INSERT INTO `user` (`login`, `password`)
                   VALUES ('".$login."', '".md5($haslo1)."');");                
               echo "<h2>Konto zostało stworzone!</h2>";
               header("Location: index.php");
           }
-          else echo "<h2>Hasła nie są takie same!</h2>";
+          else 
+          {
+            $_SESSION['e_password']="Hasła nie są takie same!";
+          }
       }
       else
       { 
@@ -88,6 +91,12 @@
               <button class="btn btn-default reveal2" style="background-color:white; margin-top:2px; height:35px;"  type="button"><img src="eye_hidden.png" style="margin-top:-6px;" width="25"></button>
             </span>          
           </div>
+          <?php
+                if(isset($_SESSION['e_password'])){
+                    echo '<div class="error">'.$_SESSION['e_password'].'</div>';
+                    unset($_SESSION['e_password']);
+                }
+            ?> 
           <br>       
           <input type="checkbox" id="regulamin" required/>
           <label for="regulamin">Akceptuję </label>
@@ -106,11 +115,10 @@
       
       <?php require('regulamin.php'); ?>
 
-    
-    </div>
       <footer class="footer">
         <p>©2020 Author: Jakub Czyż, Błażej Aleksandrzak, Dawid Badura</p>
       </footer>
+    </div>
     <script>
     //Skrypt na odkrywanie hasła
     $(".reveal").on('click',function() {
