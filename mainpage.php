@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 function addNewNote($tabela, $buttonName){
     $conn = mysqli_connect("localhost", "root", "", 'notes'); 
     if(isset($_POST[$buttonName])){
@@ -85,7 +87,8 @@ function addFirstName($karta){
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    
+    <?php if (isset($_SESSION['zalogowany'])==true):?>
+
     <script>
          function showForm(idKarty){
             var x = document.getElementById(idKarty);
@@ -106,7 +109,7 @@ function addFirstName($karta){
             <ul class="mainpageheader">
                 <li><a class="AnimateButton" id="regulaminTxt" >REGULAMIN</a></li>
                 <li><a class="AnimateButton" href="accountpage.php">KONTO</a></li>
-                <li><a class="AnimateButton" href="link">WYLOGUJ</a></li>
+                <li><a class="AnimateButton" href="logOut.php">WYLOGUJ</a></li>
             </ul> 
         </div>    
     </div>
@@ -218,5 +221,19 @@ if(isset($_POST["delete"])){
     }
 }
 ?>
+
+<?php else: ?>
+    <div class="test">
+        <header class="siteLogo"> 
+          <img src="Pagelogo.png" width="50px" height="50px"> 
+          <a href="index.php" style="text-decoration: none; color: black"><h1>Todo List</h1></a>   
+        </header>
+        <div>
+            <ul class="mainpageheader">
+                <li><a class="AnimateButton" href="index.php" style="margin-left:66%;">ZALOGUJ</a></li>
+            </ul> 
+        </div>      
+    </div>
+<?php endif;?>
 </body>
 </html>
