@@ -13,13 +13,13 @@
       $login = $_POST['login'];
       $haslo1 = $_POST['password'];
       $haslo2 = $_POST['repeatPassword'];
-      $sql = "SELECT login FROM user WHERE login = '" .$login. "';";
+      $sql = "SELECT login FROM users WHERE login = '" .$login. "';";
       $x = mysqli_num_rows(mysqli_query($conn, $sql));
       if ( $x == 0)
       {
           if ($haslo1 == $haslo2)
           {
-              mysqli_query($conn,"INSERT INTO `user` (`login`, `password`)
+              mysqli_query($conn,"INSERT INTO `users` (`login`, `password`)
                   VALUES ('".$login."', '".md5($haslo1)."');");                
               echo "<h2>Konto zostało stworzone!</h2>";
               header("Location: index.php");
@@ -94,7 +94,7 @@
           <label id="regulaminTxt" class="onText"><u>regulamin</u></label>
           <br>
           <br> 
-         
+          <button type="submit" class="btn btn-primary" name="sumbit">Zarejestruj się</button>
           <br> 
           <br>          
         </form>
@@ -106,10 +106,11 @@
       
       <?php require('regulamin.php'); ?>
 
+    
+    </div>
       <footer class="footer">
         <p>©2020 Author: Jakub Czyż, Błażej Aleksandrzak, Dawid Badura</p>
       </footer>
-    </div>
     <script>
     //Skrypt na odkrywanie hasła
     $(".reveal").on('click',function() {
