@@ -38,14 +38,13 @@ function showNotes($tabela){
 function changeName($newName, $tabela){
     $userID = $_SESSION['id'];
     $conn = mysqli_connect("localhost", "root", "", 'notes'); 
-    $sql = "UPDATE " . $tabela . " SET nazwa = '" . $newName . "' WHERE " . $tabela . ".userID = " . $userid;
-    echo "asdasd";
+    $sql = "UPDATE " . $tabela . " SET nazwa = '" . $newName . "' WHERE " . $tabela . ".userID = " . $userID;
     if ($conn->query($sql)) {
-       echo "zadziałało!"; 
+       echo ""; 
     } else {
         echo "Error updating record: " . $conn->error;        
     } 
-    //header("Location: mainpage.php") ;
+    header("Location: mainpage.php") ;
 }
 
 function showName($tabela){
@@ -135,7 +134,7 @@ function addFirstName($tabela){
                     <input type="text" placeholder="Wpisz nazwę" name="newName" class="form-control" style="width: 50%; float: left;"/>
                     <input type="hidden" name="nazwakarty" value="nazwakarta1"/>
                     <input type="submit" value="Zmień" name="change" class="btn btn-secondary"/>
-                </form>     
+                </form><br>
                 <form method="POST">
                     <input type="text" placeholder="Wpisz notatkę" name="newNote" class="form-control" style="width: 50%; float: left;"/>
                     <input type="submit" value="Dodaj" name="dodajZakupy" class="btn btn-secondary"/>
@@ -155,7 +154,7 @@ function addFirstName($tabela){
                     <input type="text" placeholder="Wpisz nazwę" name="newName" class="form-control" style="width: 50%; float: left;"/>
                     <input type="hidden" name="nazwakarty" value="nazwakarta2"/>
                     <input type="submit" value="Zmień" name="change" class="btn btn-secondary"/>
-                </form>
+                </form><br>
                     <form method="POST">
                         <input type="text" placeholder="Wpisz notatkę" name="newNote" class="form-control" style="width: 50%; float: left;"/>
                         <input type="submit" value="Dodaj" name="dodajStudia" class="btn btn-secondary"/>
@@ -175,7 +174,7 @@ function addFirstName($tabela){
                     <input type="text" placeholder="Wpisz nazwę" name="newName" class="form-control" style="width: 50%; float: left;"/>
                     <input type="hidden" name="nazwakarty" value="nazwakarta3"/>
                     <input type="submit" value="Zmień" name="change" class="btn btn-secondary"/>
-                </form>
+                </form><br>
                     <form method="POST">
                         <input type="text" placeholder="Wpisz notatkę" name="newNote" class="form-control" style="width: 50%; float: left;"/>
                         <input type="submit" value="Dodaj" name="dodajWakacje" class="btn btn-secondary"/>
@@ -195,7 +194,7 @@ function addFirstName($tabela){
                     <input type="text" placeholder="Wpisz nazwę" name="newName" class="form-control" style="width: 50%; float: left;"/>
                     <input type="hidden" name="nazwakarty" value="nazwakarta4"/>
                     <input type="submit" value="Zmień" name="change" class="btn btn-secondary"/>
-                </form>
+                </form><br>
                     <form method="POST">
                         <input type="text" placeholder="Wpisz notatkę" name="newNote" class="form-control" style="width: 50%; float: left;"/>
                         <input type="submit" value="Dodaj" name="dodajZajecia" class="btn btn-secondary"/>
@@ -214,7 +213,6 @@ function addFirstName($tabela){
 <?php
 if(isset($_POST["change"])){            
         $newName = $_POST["newName"]; 
-        echo "asdadas";
         $karta = $_POST["nazwakarty"];    
         changeName($newName, $karta);            
     }
