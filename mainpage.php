@@ -35,20 +35,23 @@ function showNotes($tabela){
     }
 }
 
-function changeName($newName, $id){
+function changeName($newName, $tabela){
+    $userID = $_SESSION['id'];
     $conn = mysqli_connect("localhost", "root", "", 'notes'); 
-    $sql = "UPDATE nazwy SET nazwa = '".$newName."' WHERE nazwy.id = " . $id;
+    $sql = "UPDATE " . $tabela . " SET nazwa = '" . $newName . "' WHERE " . $tabela . ".userID = " . $userid;
+    echo "asdasd";
     if ($conn->query($sql)) {
-       echo ""; 
-      } else {
+       echo "zadziałało!"; 
+    } else {
         echo "Error updating record: " . $conn->error;        
-      } 
-    header("Location: mainpage.php") ;
+    } 
+    //header("Location: mainpage.php") ;
 }
 
-function showName($karta){
+function showName($tabela){
+    $userID = $_SESSION['id'];
     $conn = mysqli_connect("localhost", "root", "", 'notes'); 
-    $sql = "SELECT nazwa FROM nazwy WHERE karta = '" . $karta . "'";
+    $sql = "SELECT nazwa FROM ".$tabela." WHERE nazwaKarty = '" . $tabela . "' and userID = '" . $userID . "'";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
@@ -56,13 +59,14 @@ function showName($karta){
         }
     }
     else {
-       addFirstName($karta);
+       addFirstName($tabela);
     }    
 }
 
-function addFirstName($karta){
+function addFirstName($tabela){
+    $userID = $_SESSION['id'];
     $conn = mysqli_connect("localhost", "root", "", 'notes'); 
-    $sql = "INSERT INTO nazwy (nazwa, karta) VALUES ('Nadaj nazwę!', '" . $karta . "')";   
+    $sql = "INSERT INTO ".$tabela." (nazwa, userID, nazwaKarty) VALUES ('Nadaj nazwę!', '" . $userID . "', '".$tabela."')";   
     if ($conn->query($sql))
         echo "Nadaj nazwę!";
     else 
@@ -123,13 +127,13 @@ function addFirstName($karta){
         <nav>
         <ul class="NotesNav">
             <li class="movedown">                    
-                <label><?php showName("pierwszakarta"); ?></label> 
+                <label><?php showName("nazwakarta1"); ?></label> 
                 <button class="transparentButton" onclick="showForm('changeNameForm1')"><img src='edit.png'
                         style=" width:20px; height:20px;" ></button>
                 <ul style="list-style-type:none">
                 <form method="POST" id="changeNameForm1" style="display:none;">
                     <input type="text" placeholder="Wpisz nazwę" name="newName" class="form-control" style="width: 50%; float: left;"/>
-                    <input type="hidden" name="id" id="id" value="1"/>
+                    <input type="hidden" name="nazwakarty" value="nazwakarta1"/>
                     <input type="submit" value="Zmień" name="change" class="btn btn-secondary"/>
                 </form>     
                 <form method="POST">
@@ -143,13 +147,13 @@ function addFirstName($karta){
                 </ul>  
             </li>            
             <li class="movedown">
-                <label><?php showName("drugakarta"); ?></label>
+                <label><?php showName("nazwakarta2"); ?></label>
                 <button class="transparentButton" onclick="showForm('changeNameForm2')"><img src='edit.png'
                         style=" width:20px; height:20px;" ></button> 
                 <ul style="list-style-type:none">
                 <form method="POST" id="changeNameForm2" style="display:none;">
                     <input type="text" placeholder="Wpisz nazwę" name="newName" class="form-control" style="width: 50%; float: left;"/>
-                    <input type="hidden" name="id" id="id" value="2"/>
+                    <input type="hidden" name="nazwakarty" value="nazwakarta2"/>
                     <input type="submit" value="Zmień" name="change" class="btn btn-secondary"/>
                 </form>
                     <form method="POST">
@@ -163,13 +167,13 @@ function addFirstName($karta){
                 </ul>
             </li>
             <li class="movedown">
-                <label><?php showName("trzeciakarta"); ?></label>
+                <label><?php showName("nazwakarta3"); ?></label>
                 <button class="transparentButton" onclick="showForm('changeNameForm3')"><img src='edit.png'
                         style=" width:20px;height:20px;" ></button>
                 <ul style="list-style-type:none">
                 <form method="POST" id="changeNameForm3" style="display:none;">
                     <input type="text" placeholder="Wpisz nazwę" name="newName" class="form-control" style="width: 50%; float: left;"/>
-                    <input type="hidden" name="id" id="id" value="3"/>
+                    <input type="hidden" name="nazwakarty" value="nazwakarta3"/>
                     <input type="submit" value="Zmień" name="change" class="btn btn-secondary"/>
                 </form>
                     <form method="POST">
@@ -183,13 +187,13 @@ function addFirstName($karta){
                 </ul>
             </li>
             <li class="movedown">
-                <label><?php showName("czwartakarta"); ?></label>
+                <label><?php showName("nazwakarta4"); ?></label>
                 <button class="transparentButton" onclick="showForm('changeNameForm4')"><img src='edit.png'
                         style=" width:20px; height:20px;" ></button>
                 <ul style="list-style-type:none">
                 <form method="POST" id="changeNameForm4" style="display:none;">
                     <input type="text" placeholder="Wpisz nazwę" name="newName" class="form-control" style="width: 50%; float: left;"/>
-                    <input type="hidden" name="id" id="id" value="4"/>
+                    <input type="hidden" name="nazwakarty" value="nazwakarta4"/>
                     <input type="submit" value="Zmień" name="change" class="btn btn-secondary"/>
                 </form>
                     <form method="POST">
@@ -210,8 +214,9 @@ function addFirstName($karta){
 <?php
 if(isset($_POST["change"])){            
         $newName = $_POST["newName"]; 
-        $id = $_POST["id"];    
-        changeName($newName, $id);            
+        echo "asdadas";
+        $karta = $_POST["nazwakarty"];    
+        changeName($newName, $karta);            
     }
 if(isset($_POST["delete"])){
     $toRemove = $_POST['myId'];
