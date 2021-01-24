@@ -64,7 +64,7 @@
         </header>
         <div>
             <ul class="mainpageheader">
-                <li><a class="AnimateButton" href="index.php" style="margin-left:68%;">ZALOGUJ</a></li>
+                <li><a class="AnimateButton" href="index.php" style="margin-left:66%;">ZALOGUJ</a></li>
             </ul> 
         </div>      
     </div>
