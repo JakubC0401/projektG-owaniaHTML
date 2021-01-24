@@ -14,7 +14,7 @@
         
         
         // sprawdzamy czy login i hasło są dobre
-        if (mysqli_num_rows(mysqli_query($conn,"SELECT login, password FROM users WHERE login = '".$login."' AND password = '".md5($haslo)."';")) > 0)
+        if (mysqli_num_rows(mysqli_query($conn,"SELECT login, password FROM user WHERE login = '".$login."' AND password = '".md5($haslo)."';")) > 0)
         {   
             $_SESSION['zalogowany'] = true;
             $_SESSION['login'] = $login;

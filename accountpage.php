@@ -1,3 +1,8 @@
+<?php
+  session_start();
+?>
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -17,6 +22,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <?php if (isset($_SESSION['zalogowany'])==true):?>
+
     <div class="test">
         <header class="siteLogo"> 
           <img src="Pagelogo.png" width="50px" height="50px"> 
@@ -26,7 +33,7 @@
             <ul class="mainpageheader">
                 <li><a class="AnimateButton" id="regulaminTxt">REGULAMIN</a></li>
                 <li><a class="AnimateButton" href="mainpage.php">STRONA GŁÓWNA</a></li>
-                <li><a class="AnimateButton" href="link">WYLOGUJ</a></li>
+                <li><a class="AnimateButton" href="logOut.php">WYLOGUJ</a></li>
             </ul> 
         </div>      
     </div>
@@ -41,7 +48,7 @@
         <br>
         <img width="150px" height="150px" src="UserLogo.png">
         <br><br>
-        <b>IMIE:</b>
+        <b>IMIE:</b><?php echo $_SESSION['login']?>
         <br>
         <br>
         <b>NAZWISKO:</b>
@@ -49,6 +56,18 @@
         <br>
         <b>E-MAIL:</b>
     </div>
-        
+<?php else: ?>
+  <div class="test">
+        <header class="siteLogo"> 
+          <img src="Pagelogo.png" width="50px" height="50px"> 
+          <a href="index.php" style="text-decoration: none; color: black"><h1>Todo List</h1></a>   
+        </header>
+        <div>
+            <ul class="mainpageheader">
+                <li><a class="AnimateButton" href="index.php" style="margin-left:68%;">ZALOGUJ</a></li>
+            </ul> 
+        </div>      
+    </div>
+<?php endif;?>     
 </body>
 </html>
