@@ -12,12 +12,17 @@
         $login = $_POST['login'];
         $haslo = $_POST['password'];
         
-        
+        $sql = "SELECT * FROM user WHERE login = '".$login."' AND password = '".md5($haslo)."';";
         // sprawdzamy czy login i hasło są dobre
-        if (mysqli_num_rows(mysqli_query($conn,"SELECT login, password FROM user WHERE login = '".$login."' AND password = '".md5($haslo)."';")) > 0)
+        if (mysqli_num_rows(mysqli_query($conn, $sql)) > 0)
         {   
             $_SESSION['zalogowany'] = true;
             $_SESSION['login'] = $login;
+            $result = $conn->query($sql);
+            if ($row = $result->fetch_assoc()){
+              echo "HALO" . $row["id"]; 
+              $_SESSION['id'] = $row["id"];
+            }
             
             header("location:mainpage.php");
             // zalogowany
